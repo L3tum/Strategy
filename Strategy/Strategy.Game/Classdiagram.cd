@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Strategy.State">
+    <Position X="10" Y="3" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAABABAAAAAAAQAAAAAACAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>State.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Strategy.Province">
+    <Position X="6.25" Y="3.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAQAAQAAAAAAAAAAAAEAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Province.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Strategy.Country">
+    <Position X="13.75" Y="4.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAQAAAAAAAAAAAAAAAAEAAAAAEAQAAI=</HashCode>
+      <FileName>Country.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Strategy.Population">
+    <Position X="8.25" Y="6.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAQAAAAAAAAAAAAEAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Population.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Strategy.Believe">
+    <Position X="4.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAACAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Believe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Strategy.City">
+    <Position X="3" Y="3.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAABAQAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>City.cs</FileName>
+      <NewMemberFileName>city.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Strategy.GameManager" Collapsed="true">
+    <Position X="13.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAACIAAAAAAAAAAAAAAAEAAAAEAAAAAAAAAAI=</HashCode>
+      <FileName>GameManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Strategy.City_Classification" Collapsed="true">
+    <Position X="19" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAQAAAAAAAAAAAAEAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>City_Classification.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Strategy.country_reign_form" Collapsed="true">
+    <Position X="19.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>country_reign_form.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Strategy.Religion" Collapsed="true">
+    <Position X="16" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Religion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

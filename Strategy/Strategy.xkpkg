@@ -1,0 +1,71 @@
+!Package
+Id: c3ba2dcb-b3b6-4922-a07a-e182f8d1bd8f
+SerializedVersion: {Assets: 0.0.4}
+Tags: []
+Meta:
+    Name: Strategy
+    Version: 1.0.0.0
+    Authors: []
+    Owners: []
+    RootNamespace: Strategy
+    Dependencies:
+        -   Name: Xenko
+            Version: 1.9.0-beta
+            RootAssets: []
+LocalDependencies: []
+Profiles:
+    -   Name: Shared
+        Platform: Shared
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Shared
+            -   Path: Strategy.Game/Effects
+        OutputGroupDirectories: {}
+        ProjectReferences:
+            -   Id: 9eece73d-d536-4aef-b489-351c5286e562
+                Location: Strategy.Game/Strategy.Game.csproj
+                Type: Library
+    -   Name: Windows
+        Platform: Windows
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Windows
+        OutputGroupDirectories: {}
+        ProjectReferences:
+            -   Id: f16abfde-901d-47c6-8ca5-b47195fcae9e
+                Location: Strategy.Windows/Strategy.Windows.csproj
+                Type: Executable
+    -   Name: Windows10
+        Platform: UWP
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Windows10
+        OutputGroupDirectories: {}
+        ProjectReferences:
+            -   Id: 1ef4af8b-8eab-43a9-ac6e-82121b053dc1
+                Location: Strategy.Windows10/Strategy.Windows10.csproj
+                Type: Executable
+    -   Name: Linux
+        Platform: Linux
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Linux
+        OutputGroupDirectories: {}
+        ProjectReferences:
+            -   Id: 0b14f739-fd7e-402f-bb4c-59b8d8b7d282
+                Location: Strategy.Linux/Strategy.Linux.csproj
+                Type: Executable
+    -   Name: iOS
+        Platform: iOS
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/iOS
+        OutputGroupDirectories: {}
+        ProjectReferences:
+            -   Id: 273c0a11-ca79-4ab0-b423-508b7651f426
+                Location: Strategy.iOS/Strategy.iOS.csproj
+                Type: Executable
+ExplicitFolders: []
+Bundles: []
+TemplateFolders: []
+RootAssets: []
