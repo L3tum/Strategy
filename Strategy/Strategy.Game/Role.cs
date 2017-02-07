@@ -4,21 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SiliconStudio.Xenko.Engine;
-using Strategy.Treediagram;
 
 namespace Strategy
 {
-    public class Population : AsyncScript
+    public class Role : AsyncScript
     {
         /// <summary>
-        /// Auto assigned fist time this is loaded
+        /// Name of this role
         /// </summary>
-        public int pop_id;
+        public string name;
 
         /// <summary>
-        /// Population percentage
+        /// ID of this role
         /// </summary>
-        public TreeDiagram population;
+        public int role_id;
+
+        /// <summary>
+        /// The rights this role grants a person
+        /// </summary>
+        public List<Right> rights;
 
         public override async Task Execute()
         {

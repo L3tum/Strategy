@@ -30,17 +30,22 @@ namespace SiliconStudio.DataSerializers
     [DataSerializerGlobalAttribute(typeof(SiliconStudio.DataSerializers.Strategy_City_ClassificationSerializer), typeof(Strategy.City_Classification), DataSerializerGenericMode.None, true, true, Profile = "Default")]
     [DataSerializerGlobalAttribute(typeof(SiliconStudio.DataSerializers.Strategy_CountrySerializer), typeof(Strategy.Country), DataSerializerGenericMode.None, true, true, Profile = "Default")]
     [DataSerializerGlobalAttribute(typeof(SiliconStudio.Core.Serialization.Serializers.ListSerializer<System.Int32>), typeof(System.Collections.Generic.List<System.Int32>), DataSerializerGenericMode.None, false, false, Profile = "Default")]
+    [DataSerializerGlobalAttribute(typeof(SiliconStudio.Core.Serialization.Serializers.DictionarySerializer<Strategy.Population,System.Int32>), typeof(System.Collections.Generic.Dictionary<Strategy.Population,System.Int32>), DataSerializerGenericMode.None, false, false, Profile = "Default")]
+    [DataSerializerGlobalAttribute(typeof(SiliconStudio.DataSerializers.Strategy_PopulationSerializer), typeof(Strategy.Population), DataSerializerGenericMode.None, true, true, Profile = "Default")]
+    [DataSerializerGlobalAttribute(typeof(SiliconStudio.DataSerializers.Strategy_GovernmentSerializer), typeof(Strategy.Government), DataSerializerGenericMode.None, true, true, Profile = "Default")]
+    [DataSerializerGlobalAttribute(typeof(SiliconStudio.Core.Serialization.Serializers.ListSerializer<Strategy.Government_Staff_Person>), typeof(System.Collections.Generic.List<Strategy.Government_Staff_Person>), DataSerializerGenericMode.None, false, false, Profile = "Default")]
+    [DataSerializerGlobalAttribute(typeof(SiliconStudio.DataSerializers.Strategy_Government_Staff_PersonSerializer), typeof(Strategy.Government_Staff_Person), DataSerializerGenericMode.None, true, true, Profile = "Default")]
+    [DataSerializerGlobalAttribute(typeof(SiliconStudio.DataSerializers.Strategy_ReligionSerializer), typeof(Strategy.Religion), DataSerializerGenericMode.None, true, true, Profile = "Default")]
     [DataSerializerGlobalAttribute(typeof(SiliconStudio.DataSerializers.Strategy_country_reign_formSerializer), typeof(Strategy.country_reign_form), DataSerializerGenericMode.None, true, true, Profile = "Default")]
+    [DataSerializerGlobalAttribute(typeof(SiliconStudio.DataSerializers.Strategy_EthnicitySerializer), typeof(Strategy.Ethnicity), DataSerializerGenericMode.None, true, true, Profile = "Default")]
     [DataSerializerGlobalAttribute(typeof(SiliconStudio.DataSerializers.Strategy_GameManagerSerializer), typeof(Strategy.GameManager), DataSerializerGenericMode.None, true, true, Profile = "Default")]
     [DataSerializerGlobalAttribute(typeof(SiliconStudio.Core.Serialization.Serializers.DictionarySerializer<System.Int32,Strategy.Population>), typeof(System.Collections.Generic.Dictionary<System.Int32,Strategy.Population>), DataSerializerGenericMode.None, false, false, Profile = "Default")]
-    [DataSerializerGlobalAttribute(typeof(SiliconStudio.DataSerializers.Strategy_PopulationSerializer), typeof(Strategy.Population), DataSerializerGenericMode.None, true, true, Profile = "Default")]
     [DataSerializerGlobalAttribute(typeof(SiliconStudio.Core.Serialization.Serializers.DictionarySerializer<System.Int32,Strategy.Country>), typeof(System.Collections.Generic.Dictionary<System.Int32,Strategy.Country>), DataSerializerGenericMode.None, false, false, Profile = "Default")]
     [DataSerializerGlobalAttribute(typeof(SiliconStudio.Core.Serialization.Serializers.DictionarySerializer<System.Int32,Strategy.Believe>), typeof(System.Collections.Generic.Dictionary<System.Int32,Strategy.Believe>), DataSerializerGenericMode.None, false, false, Profile = "Default")]
     [DataSerializerGlobalAttribute(typeof(SiliconStudio.Core.Serialization.Serializers.DictionarySerializer<System.Int32,Strategy.State>), typeof(System.Collections.Generic.Dictionary<System.Int32,Strategy.State>), DataSerializerGenericMode.None, false, false, Profile = "Default")]
     [DataSerializerGlobalAttribute(typeof(SiliconStudio.DataSerializers.Strategy_StateSerializer), typeof(Strategy.State), DataSerializerGenericMode.None, true, true, Profile = "Default")]
     [DataSerializerGlobalAttribute(typeof(SiliconStudio.Core.Serialization.Serializers.DictionarySerializer<System.Int32,Strategy.Province>), typeof(System.Collections.Generic.Dictionary<System.Int32,Strategy.Province>), DataSerializerGenericMode.None, false, false, Profile = "Default")]
     [DataSerializerGlobalAttribute(typeof(SiliconStudio.DataSerializers.Strategy_ProvinceSerializer), typeof(Strategy.Province), DataSerializerGenericMode.None, true, true, Profile = "Default")]
-    [DataSerializerGlobalAttribute(typeof(SiliconStudio.DataSerializers.Strategy_ReligionSerializer), typeof(Strategy.Religion), DataSerializerGenericMode.None, true, true, Profile = "Default")]
    	public static class Strategy_GameSerializerFactory
 	{
 	    [SiliconStudio.Core.ModuleInitializer]
@@ -70,17 +75,22 @@ namespace SiliconStudio.DataSerializers
 				assemblySerializersProfile.Add(new AssemblySerializerEntry(new SiliconStudio.Core.Storage.ObjectId(0xdc943164, 0x20bcb78a, 0xf70ca33c, 0xf1fd3d6a), typeof(Strategy.City_Classification), typeof(SiliconStudio.DataSerializers.Strategy_City_ClassificationSerializer)));
 				assemblySerializersProfile.Add(new AssemblySerializerEntry(new SiliconStudio.Core.Storage.ObjectId(0xa93b8fcb, 0x9809c426, 0x3a89a217, 0x4b079f7c), typeof(Strategy.Country), typeof(SiliconStudio.DataSerializers.Strategy_CountrySerializer)));
 				assemblySerializersProfile.Add(new AssemblySerializerEntry(new SiliconStudio.Core.Storage.ObjectId(0x3e3ca2b8, 0x17007a32, 0xa8a3b32f, 0x26e7f933), typeof(System.Collections.Generic.List<System.Int32>), typeof(SiliconStudio.Core.Serialization.Serializers.ListSerializer<System.Int32>)));
+				assemblySerializersProfile.Add(new AssemblySerializerEntry(new SiliconStudio.Core.Storage.ObjectId(0xeeced12e, 0xe7cf9dbb, 0x418d7fb1, 0xb4736226), typeof(System.Collections.Generic.Dictionary<Strategy.Population,System.Int32>), typeof(SiliconStudio.Core.Serialization.Serializers.DictionarySerializer<Strategy.Population,System.Int32>)));
+				assemblySerializersProfile.Add(new AssemblySerializerEntry(new SiliconStudio.Core.Storage.ObjectId(0x6f744978, 0xf28745fb, 0x96b3d247, 0x06f11b9a), typeof(Strategy.Population), typeof(SiliconStudio.DataSerializers.Strategy_PopulationSerializer)));
+				assemblySerializersProfile.Add(new AssemblySerializerEntry(new SiliconStudio.Core.Storage.ObjectId(0x1e34102a, 0x1db28d8e, 0xad398cdc, 0x67d931a3), typeof(Strategy.Government), typeof(SiliconStudio.DataSerializers.Strategy_GovernmentSerializer)));
+				assemblySerializersProfile.Add(new AssemblySerializerEntry(new SiliconStudio.Core.Storage.ObjectId(0xeb366091, 0x8f13daa9, 0x2af6fed2, 0x2b70cd7b), typeof(System.Collections.Generic.List<Strategy.Government_Staff_Person>), typeof(SiliconStudio.Core.Serialization.Serializers.ListSerializer<Strategy.Government_Staff_Person>)));
+				assemblySerializersProfile.Add(new AssemblySerializerEntry(new SiliconStudio.Core.Storage.ObjectId(0x0f93cb0b, 0xd9c95143, 0x88fe7784, 0x38de8233), typeof(Strategy.Government_Staff_Person), typeof(SiliconStudio.DataSerializers.Strategy_Government_Staff_PersonSerializer)));
+				assemblySerializersProfile.Add(new AssemblySerializerEntry(new SiliconStudio.Core.Storage.ObjectId(0x1834c528, 0x4428c4d7, 0x80fbc09a, 0xb103d274), typeof(Strategy.Religion), typeof(SiliconStudio.DataSerializers.Strategy_ReligionSerializer)));
 				assemblySerializersProfile.Add(new AssemblySerializerEntry(new SiliconStudio.Core.Storage.ObjectId(0xec16c101, 0x148a775a, 0x4ab58eb2, 0x4c6bfa4d), typeof(Strategy.country_reign_form), typeof(SiliconStudio.DataSerializers.Strategy_country_reign_formSerializer)));
+				assemblySerializersProfile.Add(new AssemblySerializerEntry(new SiliconStudio.Core.Storage.ObjectId(0xe72963d9, 0x84002115, 0x9cf6d4cd, 0x3c378fd3), typeof(Strategy.Ethnicity), typeof(SiliconStudio.DataSerializers.Strategy_EthnicitySerializer)));
 				assemblySerializersProfile.Add(new AssemblySerializerEntry(new SiliconStudio.Core.Storage.ObjectId(0x1dfc486b, 0xd61bfe58, 0x4e0d571a, 0x2a4deabf), typeof(Strategy.GameManager), typeof(SiliconStudio.DataSerializers.Strategy_GameManagerSerializer)));
 				assemblySerializersProfile.Add(new AssemblySerializerEntry(new SiliconStudio.Core.Storage.ObjectId(0x736e9489, 0x057acd73, 0xf1f06ac1, 0x04cee503), typeof(System.Collections.Generic.Dictionary<System.Int32,Strategy.Population>), typeof(SiliconStudio.Core.Serialization.Serializers.DictionarySerializer<System.Int32,Strategy.Population>)));
-				assemblySerializersProfile.Add(new AssemblySerializerEntry(new SiliconStudio.Core.Storage.ObjectId(0x6f744978, 0xf28745fb, 0x96b3d247, 0x06f11b9a), typeof(Strategy.Population), typeof(SiliconStudio.DataSerializers.Strategy_PopulationSerializer)));
 				assemblySerializersProfile.Add(new AssemblySerializerEntry(new SiliconStudio.Core.Storage.ObjectId(0x386b93ec, 0xb58c77bd, 0x7393c4df, 0xc5d84cf2), typeof(System.Collections.Generic.Dictionary<System.Int32,Strategy.Country>), typeof(SiliconStudio.Core.Serialization.Serializers.DictionarySerializer<System.Int32,Strategy.Country>)));
 				assemblySerializersProfile.Add(new AssemblySerializerEntry(new SiliconStudio.Core.Storage.ObjectId(0xdf6c3af2, 0x24e8bdaa, 0xa6f91ebf, 0x67389c06), typeof(System.Collections.Generic.Dictionary<System.Int32,Strategy.Believe>), typeof(SiliconStudio.Core.Serialization.Serializers.DictionarySerializer<System.Int32,Strategy.Believe>)));
 				assemblySerializersProfile.Add(new AssemblySerializerEntry(new SiliconStudio.Core.Storage.ObjectId(0x764a2b01, 0x498771de, 0xf8b11b3b, 0x4b0c00ff), typeof(System.Collections.Generic.Dictionary<System.Int32,Strategy.State>), typeof(SiliconStudio.Core.Serialization.Serializers.DictionarySerializer<System.Int32,Strategy.State>)));
 				assemblySerializersProfile.Add(new AssemblySerializerEntry(new SiliconStudio.Core.Storage.ObjectId(0xfb71cc71, 0xc716d0b7, 0x72b5948e, 0xb3c53064), typeof(Strategy.State), typeof(SiliconStudio.DataSerializers.Strategy_StateSerializer)));
 				assemblySerializersProfile.Add(new AssemblySerializerEntry(new SiliconStudio.Core.Storage.ObjectId(0xfb6b8fed, 0x28034bf3, 0x2c6d2465, 0xe27ec6fb), typeof(System.Collections.Generic.Dictionary<System.Int32,Strategy.Province>), typeof(SiliconStudio.Core.Serialization.Serializers.DictionarySerializer<System.Int32,Strategy.Province>)));
 				assemblySerializersProfile.Add(new AssemblySerializerEntry(new SiliconStudio.Core.Storage.ObjectId(0x79983ce7, 0xa418e807, 0xd9b616f3, 0x6c9e7a2c), typeof(Strategy.Province), typeof(SiliconStudio.DataSerializers.Strategy_ProvinceSerializer)));
-				assemblySerializersProfile.Add(new AssemblySerializerEntry(new SiliconStudio.Core.Storage.ObjectId(0x1834c528, 0x4428c4d7, 0x80fbc09a, 0xb103d274), typeof(Strategy.Religion), typeof(SiliconStudio.DataSerializers.Strategy_ReligionSerializer)));
 			}
 			{
 				var assemblySerializersProfile = new AssemblySerializersPerProfile();
@@ -290,7 +300,8 @@ namespace SiliconStudio.DataSerializers
 		private DataSerializer<System.Int32> country_idSerializer;
 		private DataSerializer<System.Collections.Generic.List<System.Int32>> statesSerializer;
 		private DataSerializer<System.Collections.Generic.List<System.Int32>> provincesSerializer;
-		private DataSerializer<System.Collections.Generic.Dictionary<System.Int32,System.Int32>> populationsSerializer;
+		private DataSerializer<System.Collections.Generic.Dictionary<Strategy.Population,System.Int32>> populationsSerializer;
+		private DataSerializer<Strategy.Government> governmentSerializer;
 
 		public override void Initialize(SerializerSelector serializerSelector)
 		{
@@ -302,7 +313,8 @@ namespace SiliconStudio.DataSerializers
 			country_nameSerializer = MemberSerializer<System.String>.Create(serializerSelector);
 			country_idSerializer = MemberSerializer<System.Int32>.Create(serializerSelector);
 			statesSerializer = MemberSerializer<System.Collections.Generic.List<System.Int32>>.Create(serializerSelector);
-			populationsSerializer = MemberSerializer<System.Collections.Generic.Dictionary<System.Int32,System.Int32>>.Create(serializerSelector);
+			populationsSerializer = MemberSerializer<System.Collections.Generic.Dictionary<Strategy.Population,System.Int32>>.Create(serializerSelector);
+			governmentSerializer = MemberSerializer<Strategy.Government>.Create(serializerSelector);
 		}
 
 		public override void Serialize(ref Strategy.Country obj, ArchiveMode mode, SerializationStream stream)
@@ -317,6 +329,163 @@ namespace SiliconStudio.DataSerializers
             statesSerializer.Serialize(ref obj.states, mode, stream);
             statesSerializer.Serialize(ref obj.provinces, mode, stream);
             populationsSerializer.Serialize(ref obj.populations, mode, stream);
+            governmentSerializer.Serialize(ref obj.government, mode, stream);
+		}
+
+		internal static void ForceGenericInstantiation()
+		{
+		}
+	}
+}
+
+namespace SiliconStudio.DataSerializers
+{
+	sealed class Strategy_PopulationSerializer : ClassDataSerializer<Strategy.Population>
+	{
+		private DataSerializer<SiliconStudio.Xenko.Engine.AsyncScript> parentSerializer;
+		private DataSerializer<System.String> nameSerializer;
+		private DataSerializer<System.Int32> pop_idSerializer;
+		private DataSerializer<System.Collections.Generic.Dictionary<System.Int32,System.Int32>> believesSerializer;
+		private DataSerializer<System.Collections.Generic.Dictionary<System.Int32,System.Int32>> religionsSerializer;
+		private DataSerializer<System.Collections.Generic.Dictionary<System.Int32,System.Int32>> ethnicitiesSerializer;
+
+		public override void Initialize(SerializerSelector serializerSelector)
+		{
+			// Get parent serializer
+			parentSerializer = serializerSelector.GetSerializer<SiliconStudio.Xenko.Engine.AsyncScript>();
+			if (parentSerializer == null)
+				throw new InvalidOperationException(string.Format("Could not find parent serializer for type {0}", @"SiliconStudio.Xenko.Engine.AsyncScript"));
+			// Cache member serializers
+			nameSerializer = MemberSerializer<System.String>.Create(serializerSelector);
+			pop_idSerializer = MemberSerializer<System.Int32>.Create(serializerSelector);
+			believesSerializer = MemberSerializer<System.Collections.Generic.Dictionary<System.Int32,System.Int32>>.Create(serializerSelector);
+		}
+
+		public override void Serialize(ref Strategy.Population obj, ArchiveMode mode, SerializationStream stream)
+		{
+			// Serialize parent (for now we don't copy reference back because it shouldn't change)
+			SiliconStudio.Xenko.Engine.AsyncScript parentObj = obj;
+			parentSerializer.Serialize(ref parentObj, mode, stream);
+			obj = (Strategy.Population)parentObj;
+
+            nameSerializer.Serialize(ref obj.name, mode, stream);
+            pop_idSerializer.Serialize(ref obj.pop_id, mode, stream);
+            believesSerializer.Serialize(ref obj.believes, mode, stream);
+            believesSerializer.Serialize(ref obj.religions, mode, stream);
+            believesSerializer.Serialize(ref obj.ethnicities, mode, stream);
+		}
+
+		internal static void ForceGenericInstantiation()
+		{
+		}
+	}
+}
+
+namespace SiliconStudio.DataSerializers
+{
+	sealed class Strategy_GovernmentSerializer : ClassDataSerializer<Strategy.Government>
+	{
+		private DataSerializer<SiliconStudio.Xenko.Engine.AsyncScript> parentSerializer;
+		private DataSerializer<System.Collections.Generic.List<Strategy.Government_Staff_Person>> staffSerializer;
+		private DataSerializer<Strategy.Government_Staff_Person> leaderSerializer;
+
+		public override void Initialize(SerializerSelector serializerSelector)
+		{
+			// Get parent serializer
+			parentSerializer = serializerSelector.GetSerializer<SiliconStudio.Xenko.Engine.AsyncScript>();
+			if (parentSerializer == null)
+				throw new InvalidOperationException(string.Format("Could not find parent serializer for type {0}", @"SiliconStudio.Xenko.Engine.AsyncScript"));
+			// Cache member serializers
+			staffSerializer = MemberSerializer<System.Collections.Generic.List<Strategy.Government_Staff_Person>>.Create(serializerSelector);
+			leaderSerializer = MemberSerializer<Strategy.Government_Staff_Person>.Create(serializerSelector);
+		}
+
+		public override void Serialize(ref Strategy.Government obj, ArchiveMode mode, SerializationStream stream)
+		{
+			// Serialize parent (for now we don't copy reference back because it shouldn't change)
+			SiliconStudio.Xenko.Engine.AsyncScript parentObj = obj;
+			parentSerializer.Serialize(ref parentObj, mode, stream);
+			obj = (Strategy.Government)parentObj;
+
+            staffSerializer.Serialize(ref obj.staff, mode, stream);
+            leaderSerializer.Serialize(ref obj.leader, mode, stream);
+		}
+
+		internal static void ForceGenericInstantiation()
+		{
+		}
+	}
+}
+
+namespace SiliconStudio.DataSerializers
+{
+	sealed class Strategy_Government_Staff_PersonSerializer : ClassDataSerializer<Strategy.Government_Staff_Person>
+	{
+		private DataSerializer<SiliconStudio.Xenko.Engine.AsyncScript> parentSerializer;
+		private DataSerializer<System.String> nameSerializer;
+		private DataSerializer<System.String> gsp_idSerializer;
+		private DataSerializer<Strategy.Religion> religionSerializer;
+		private DataSerializer<Strategy.Believe> believerSerializer;
+
+		public override void Initialize(SerializerSelector serializerSelector)
+		{
+			// Get parent serializer
+			parentSerializer = serializerSelector.GetSerializer<SiliconStudio.Xenko.Engine.AsyncScript>();
+			if (parentSerializer == null)
+				throw new InvalidOperationException(string.Format("Could not find parent serializer for type {0}", @"SiliconStudio.Xenko.Engine.AsyncScript"));
+			// Cache member serializers
+			nameSerializer = MemberSerializer<System.String>.Create(serializerSelector);
+			religionSerializer = MemberSerializer<Strategy.Religion>.Create(serializerSelector);
+			believerSerializer = MemberSerializer<Strategy.Believe>.Create(serializerSelector);
+		}
+
+		public override void Serialize(ref Strategy.Government_Staff_Person obj, ArchiveMode mode, SerializationStream stream)
+		{
+			// Serialize parent (for now we don't copy reference back because it shouldn't change)
+			SiliconStudio.Xenko.Engine.AsyncScript parentObj = obj;
+			parentSerializer.Serialize(ref parentObj, mode, stream);
+			obj = (Strategy.Government_Staff_Person)parentObj;
+
+            nameSerializer.Serialize(ref obj.name, mode, stream);
+            nameSerializer.Serialize(ref obj.gsp_id, mode, stream);
+            religionSerializer.Serialize(ref obj.religion, mode, stream);
+            believerSerializer.Serialize(ref obj.believer, mode, stream);
+		}
+
+		internal static void ForceGenericInstantiation()
+		{
+		}
+	}
+}
+
+namespace SiliconStudio.DataSerializers
+{
+	sealed class Strategy_ReligionSerializer : ClassDataSerializer<Strategy.Religion>
+	{
+		private DataSerializer<SiliconStudio.Xenko.Engine.AsyncScript> parentSerializer;
+		private DataSerializer<System.Int32> religion_idSerializer;
+		private DataSerializer<System.String> nameSerializer;
+
+		public override void Initialize(SerializerSelector serializerSelector)
+		{
+			// Get parent serializer
+			parentSerializer = serializerSelector.GetSerializer<SiliconStudio.Xenko.Engine.AsyncScript>();
+			if (parentSerializer == null)
+				throw new InvalidOperationException(string.Format("Could not find parent serializer for type {0}", @"SiliconStudio.Xenko.Engine.AsyncScript"));
+			// Cache member serializers
+			religion_idSerializer = MemberSerializer<System.Int32>.Create(serializerSelector);
+			nameSerializer = MemberSerializer<System.String>.Create(serializerSelector);
+		}
+
+		public override void Serialize(ref Strategy.Religion obj, ArchiveMode mode, SerializationStream stream)
+		{
+			// Serialize parent (for now we don't copy reference back because it shouldn't change)
+			SiliconStudio.Xenko.Engine.AsyncScript parentObj = obj;
+			parentSerializer.Serialize(ref parentObj, mode, stream);
+			obj = (Strategy.Religion)parentObj;
+
+            religion_idSerializer.Serialize(ref obj.religion_id, mode, stream);
+            nameSerializer.Serialize(ref obj.name, mode, stream);
 		}
 
 		internal static void ForceGenericInstantiation()
@@ -362,6 +531,36 @@ namespace SiliconStudio.DataSerializers
 
 namespace SiliconStudio.DataSerializers
 {
+	sealed class Strategy_EthnicitySerializer : ClassDataSerializer<Strategy.Ethnicity>
+	{
+		private DataSerializer<SiliconStudio.Xenko.Engine.AsyncScript> parentSerializer;
+
+		public override void Initialize(SerializerSelector serializerSelector)
+		{
+			// Get parent serializer
+			parentSerializer = serializerSelector.GetSerializer<SiliconStudio.Xenko.Engine.AsyncScript>();
+			if (parentSerializer == null)
+				throw new InvalidOperationException(string.Format("Could not find parent serializer for type {0}", @"SiliconStudio.Xenko.Engine.AsyncScript"));
+			// Cache member serializers
+		}
+
+		public override void Serialize(ref Strategy.Ethnicity obj, ArchiveMode mode, SerializationStream stream)
+		{
+			// Serialize parent (for now we don't copy reference back because it shouldn't change)
+			SiliconStudio.Xenko.Engine.AsyncScript parentObj = obj;
+			parentSerializer.Serialize(ref parentObj, mode, stream);
+			obj = (Strategy.Ethnicity)parentObj;
+
+		}
+
+		internal static void ForceGenericInstantiation()
+		{
+		}
+	}
+}
+
+namespace SiliconStudio.DataSerializers
+{
 	sealed class Strategy_GameManagerSerializer : ClassDataSerializer<Strategy.GameManager>
 	{
 		private DataSerializer<SiliconStudio.Xenko.Engine.StartupScript> parentSerializer;
@@ -397,47 +596,6 @@ namespace SiliconStudio.DataSerializers
             believesSerializer.Serialize(ref obj.believes, mode, stream);
             statesSerializer.Serialize(ref obj.states, mode, stream);
             provincesSerializer.Serialize(ref obj.provinces, mode, stream);
-		}
-
-		internal static void ForceGenericInstantiation()
-		{
-		}
-	}
-}
-
-namespace SiliconStudio.DataSerializers
-{
-	sealed class Strategy_PopulationSerializer : ClassDataSerializer<Strategy.Population>
-	{
-		private DataSerializer<SiliconStudio.Xenko.Engine.AsyncScript> parentSerializer;
-		private DataSerializer<System.String> nameSerializer;
-		private DataSerializer<System.Int32> pop_idSerializer;
-		private DataSerializer<System.Collections.Generic.Dictionary<System.Int32,System.Int32>> believesSerializer;
-		private DataSerializer<System.Collections.Generic.Dictionary<System.Int32,System.Int32>> religionsSerializer;
-
-		public override void Initialize(SerializerSelector serializerSelector)
-		{
-			// Get parent serializer
-			parentSerializer = serializerSelector.GetSerializer<SiliconStudio.Xenko.Engine.AsyncScript>();
-			if (parentSerializer == null)
-				throw new InvalidOperationException(string.Format("Could not find parent serializer for type {0}", @"SiliconStudio.Xenko.Engine.AsyncScript"));
-			// Cache member serializers
-			nameSerializer = MemberSerializer<System.String>.Create(serializerSelector);
-			pop_idSerializer = MemberSerializer<System.Int32>.Create(serializerSelector);
-			believesSerializer = MemberSerializer<System.Collections.Generic.Dictionary<System.Int32,System.Int32>>.Create(serializerSelector);
-		}
-
-		public override void Serialize(ref Strategy.Population obj, ArchiveMode mode, SerializationStream stream)
-		{
-			// Serialize parent (for now we don't copy reference back because it shouldn't change)
-			SiliconStudio.Xenko.Engine.AsyncScript parentObj = obj;
-			parentSerializer.Serialize(ref parentObj, mode, stream);
-			obj = (Strategy.Population)parentObj;
-
-            nameSerializer.Serialize(ref obj.name, mode, stream);
-            pop_idSerializer.Serialize(ref obj.pop_id, mode, stream);
-            believesSerializer.Serialize(ref obj.believes, mode, stream);
-            believesSerializer.Serialize(ref obj.religions, mode, stream);
 		}
 
 		internal static void ForceGenericInstantiation()
@@ -495,7 +653,7 @@ namespace SiliconStudio.DataSerializers
 		private DataSerializer<SiliconStudio.Xenko.Engine.AsyncScript> parentSerializer;
 		private DataSerializer<System.String> nameSerializer;
 		private DataSerializer<System.Int32> province_idSerializer;
-		private DataSerializer<System.Collections.Generic.Dictionary<System.Int32,System.Int32>> populationsSerializer;
+		private DataSerializer<System.Collections.Generic.Dictionary<Strategy.Population,System.Int32>> populationsSerializer;
 		private DataSerializer<System.Collections.Generic.List<System.Int32>> citiesSerializer;
 
 		public override void Initialize(SerializerSelector serializerSelector)
@@ -507,7 +665,7 @@ namespace SiliconStudio.DataSerializers
 			// Cache member serializers
 			nameSerializer = MemberSerializer<System.String>.Create(serializerSelector);
 			province_idSerializer = MemberSerializer<System.Int32>.Create(serializerSelector);
-			populationsSerializer = MemberSerializer<System.Collections.Generic.Dictionary<System.Int32,System.Int32>>.Create(serializerSelector);
+			populationsSerializer = MemberSerializer<System.Collections.Generic.Dictionary<Strategy.Population,System.Int32>>.Create(serializerSelector);
 			citiesSerializer = MemberSerializer<System.Collections.Generic.List<System.Int32>>.Create(serializerSelector);
 		}
 
@@ -522,42 +680,6 @@ namespace SiliconStudio.DataSerializers
             province_idSerializer.Serialize(ref obj.province_id, mode, stream);
             populationsSerializer.Serialize(ref obj.populations, mode, stream);
             citiesSerializer.Serialize(ref obj.cities, mode, stream);
-		}
-
-		internal static void ForceGenericInstantiation()
-		{
-		}
-	}
-}
-
-namespace SiliconStudio.DataSerializers
-{
-	sealed class Strategy_ReligionSerializer : ClassDataSerializer<Strategy.Religion>
-	{
-		private DataSerializer<SiliconStudio.Xenko.Engine.AsyncScript> parentSerializer;
-		private DataSerializer<System.Int32> religion_idSerializer;
-		private DataSerializer<System.String> nameSerializer;
-
-		public override void Initialize(SerializerSelector serializerSelector)
-		{
-			// Get parent serializer
-			parentSerializer = serializerSelector.GetSerializer<SiliconStudio.Xenko.Engine.AsyncScript>();
-			if (parentSerializer == null)
-				throw new InvalidOperationException(string.Format("Could not find parent serializer for type {0}", @"SiliconStudio.Xenko.Engine.AsyncScript"));
-			// Cache member serializers
-			religion_idSerializer = MemberSerializer<System.Int32>.Create(serializerSelector);
-			nameSerializer = MemberSerializer<System.String>.Create(serializerSelector);
-		}
-
-		public override void Serialize(ref Strategy.Religion obj, ArchiveMode mode, SerializationStream stream)
-		{
-			// Serialize parent (for now we don't copy reference back because it shouldn't change)
-			SiliconStudio.Xenko.Engine.AsyncScript parentObj = obj;
-			parentSerializer.Serialize(ref parentObj, mode, stream);
-			obj = (Strategy.Religion)parentObj;
-
-            religion_idSerializer.Serialize(ref obj.religion_id, mode, stream);
-            nameSerializer.Serialize(ref obj.name, mode, stream);
 		}
 
 		internal static void ForceGenericInstantiation()

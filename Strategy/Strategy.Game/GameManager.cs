@@ -13,23 +13,10 @@ namespace Strategy
     {
         // Declared public member fields and properties will show in the game studio
         /// <summary>
-        /// Populations in the game
-        /// First int: pop_id
-        /// </summary>
-        public Dictionary<int, Population> populations;
-
-        /// <summary>
         /// Countries in the game
         /// First int: country_id
         /// </summary>
         public Dictionary<int, Country> countries;
-
-        /// <summary>
-        /// Believes in the game
-        /// First int: believe_id
-        /// </summary>
-        public Dictionary<int, Believe> believes;
-        
 
         /// <summary>
         /// States in the game
@@ -42,6 +29,38 @@ namespace Strategy
         /// First int: province_id;
         /// </summary>
         public Dictionary<int, Province> provinces;
+
+        /// <summary>
+        /// Cities in the game
+        /// First int: city_id
+        /// </summary>
+        public Dictionary<int, City> cities;
+
+        /// <summary>
+        /// Believes in the game
+        /// First int: believe_id
+        /// </summary>
+        public Dictionary<int, Believe> believes;
+
+        /// <summary>
+        /// Religions in the game
+        /// </summary>
+        public Dictionary<int, Religion> religions;
+
+        /// <summary>
+        /// Roles in the game
+        /// </summary>
+        public Dictionary<int, Role> roles;
+
+        /// <summary>
+        /// Game currently running
+        /// </summary>
+        public StrategyGame game;
+
+        /// <summary>
+        /// EventManager for the current game
+        /// </summary>
+        public EventManager eventManager;
 
         public override void Start()
         {

@@ -6,7 +6,7 @@ namespace Strategy
     {
         static void Main(string[] args)
         {
-            using (var game = new Game())
+            using (var game = new Strategy.StrategyGame())
             {
                 game.Run();
             }

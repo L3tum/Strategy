@@ -10,17 +10,19 @@ namespace Strategy
     public class City : AsyncScript
     {
         /// <summary>
-        /// Population percentages in this city
-        /// First int=pop_id
-        /// second int=percentage
+        /// Name of this city
         /// </summary>
-        public Dictionary<int, int> populations;
+        public string name;
+
+        /// <summary>
+        /// Population in this city
+        /// </summary>
+        public Population population;
 
         /// <summary>
         /// Classification of a city(e.g. village, city, capitol)
-        /// int=classification_id
         /// </summary>
-        public int classification;
+        public City_Classification classification;
 
         /// <summary>
         /// Auto-assigned fist time this is loaded

@@ -2,3 +2,4 @@ C:\Users\Tom\Documents\Xenko Projects\Strategy\Strategy\Bin\Windows\Debug\Strate
 C:\Users\Tom\Documents\Xenko Projects\Strategy\Strategy\Bin\Windows\Debug\Strategy.Game.pdb
 C:\Users\Tom\Documents\Xenko Projects\Strategy\Strategy\Strategy.Game\obj\Windows\Debug\Strategy.Game.dll
 C:\Users\Tom\Documents\Xenko Projects\Strategy\Strategy\Strategy.Game\obj\Windows\Debug\Strategy.Game.pdb
+C:\Users\Tom\Documents\Xenko Projects\Strategy\Strategy\Strategy.Game\obj\Windows\Debug\Strategy.Game.csprojResolveAssemblyReference.cache

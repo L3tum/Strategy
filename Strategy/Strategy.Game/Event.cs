@@ -4,21 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SiliconStudio.Xenko.Engine;
-using Strategy.Treediagram;
 
 namespace Strategy
 {
-    public class Population : AsyncScript
+    public class Event : AsyncScript
     {
-        /// <summary>
-        /// Auto assigned fist time this is loaded
-        /// </summary>
-        public int pop_id;
+        public List<Trigger> triggers;
 
-        /// <summary>
-        /// Population percentage
-        /// </summary>
-        public TreeDiagram population;
+        public List<Trigger> cummulatedTrigger;
+
+        public List<Effect> effects;
 
         public override async Task Execute()
         {

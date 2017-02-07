@@ -20,12 +20,13 @@ namespace Strategy
         public int province_id;
 
         /// <summary>
-        /// Pop_id first int
+        /// Population in this province
         /// </summary>
-        public Dictionary<int, int> populations;
+        public Population population;
 
         /// <summary>
         /// Cities in this province
+        /// city_id
         /// </summary>
         public List<int> cities;
 

@@ -18,20 +18,29 @@ namespace Strategy
 
         /// <summary>
         /// States in this country
-        /// int=state_id
+        /// State_id
         /// </summary>
         public List<int> states;
 
         /// <summary>
-        /// Provinces in this country
-        /// int=province_id
+        /// Population in this country
         /// </summary>
-        public List<int> provinces;
+        public Population population;
 
         /// <summary>
-        /// Population percentages in this country
+        /// Government
         /// </summary>
-        public Dictionary<int, int> populations;
+        public Government government;
+
+        /// <summary>
+        /// Reign form of this country(Democracy, Anarchy etc..)
+        /// </summary>
+        public country_reign_form reign_form;
+
+        /// <summary>
+        /// Sphere of influence over other countries as major
+        /// </summary>
+        public SphereOfInfluence sphere;
 
         public override async Task Execute()
         {

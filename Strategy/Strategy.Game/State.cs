@@ -14,9 +14,21 @@ namespace Strategy
         /// Province_id
         /// </summary>
         public List<int> provinces;
+
+        /// <summary>
+        /// Name of this state
+        /// </summary>
         public string state_name;
+
+        /// <summary>
+        /// Auto assigned on first load
+        /// </summary>
         public int state_id;
-        public Dictionary<int, int> populations;
+
+        /// <summary>
+        /// Population in this state
+        /// </summary>
+        public Population population;
 
         public override async Task Execute()
         {
